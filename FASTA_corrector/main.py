@@ -3,17 +3,44 @@ import os
 import csv
 import argparse
 import sys
-saving_DIR="/home/m.serajian/share/MTB_Database/DV-BRC_corrected/"
-input_DIR="/home/m.serajian/share/MTB_Database/DV-BRC-Sientific-reports-Jan2024/"
 
-file_name= sys.argv[1]
 
-print("input:")
-saving_DIR=saving_DIR+file_name
-print(saving_DIR)
-print("output:")
-input_DIR=input_DIR+file_name
-print(input_DIR)
+# Define color variables
+red_color = '\033[91m'  # ANSI escape code for red
+green_color = '\033[92m'  # ANSI escape code for green
+reset_color = '\033[0m'  # ANSI escape code to reset color
+
+class FileNotFoundError(Exception):
+    pass
+
+class EmptyFileError(Exception):
+    pass
+
+class DirectoryNotFoundError(Exception):
+    pass
+
+def process_arguments():
+    parser = argparse.ArgumentParser(description="Process FASTA files and save corrected CSV files.")
+    parser.add_argument("-i", "--input", required=True, help="Input directory containing FASTA files.")
+    parser.add_argument("-o", "--output", required=True, help="Output directory to save corrected CSV files.")
+
+    args = parser.parse_args()
+
+    # Check if the input file exists
+    input_file = args.input
+    if not os.path.exists(input_file):
+        raise FileNotFoundError(f"{red_color}Error: File '{input_file}' not found.{reset_color}")
+
+    # Check if the input file is empty
+    if os.path.getsize(input_file) == 0:
+        raise EmptyFileError(f"{red_color}Error: File '{input_file}' is empty.{reset_color}")
+
+    # Check if the output directory exists
+    output_dir = args.output
+    if not os.path.exists(output_dir):
+        raise DirectoryNotFoundError(f"{red_color}Error: Directory '{output_dir}' not found.{reset_color}")
+
+    return args
 
 def modify_text_file(input_path,output_path):
     with open(input_path, 'r') as file:
@@ -35,4 +62,24 @@ def modify_text_file(input_path,output_path):
         file.write(modified_content)
 # Example usage
 
-modify_text_file(input_DIR,saving_DIR)
+
+def main():
+    try:
+        args = process_arguments()
+        
+        # Extract the base name from the input file path
+        file_name = os.path.basename(args.input)
+        print(file_name)
+        output_file_directory = os.path.join(args.output, file_name)
+
+        print(output_file_directory)
+        modify_text_file(args.input,output_file_directory)
+
+    except (FileNotFoundError, EmptyFileError, DirectoryNotFoundError) as e:
+        print(str(e))
+        sys.exit(1)
+
+      
+if __name__ == "__main__":
+    main()
+
