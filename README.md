@@ -14,23 +14,7 @@ This project focuses on the critical analysis of antimicrobial resistance (AMR) 
 ## Overview
 In this project, we undertake a systematic approach to analyze AMR prevalence. Our methodology encompasses the acquisition and analysis of extensive metadata, utilization of specialized tools for data retrieval and processing, and advanced predictive modeling techniques to interpret our findings.
 
-## Getting Started
-These instructions will guide you through setting up the project on your local machine for development and testing purposes.
-
-### Dependencies
-* [python](https://www.python.org/) 3.0+ (3.6+ recommended)
-    - [sklearn](https://scikit-learn.org/stable/whats_new/v1.1.html#version-1-1-2) (Version 1.1.2) 
-    - [joblib](https://joblib.readthedocs.io/en/stable/) (Pre-exists on python3+)
-* [Cmake](https://cmake.org/)(tested on v3.26.4)
-* [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
-
-
-
-### Installation
-- Step-by-step guide to setting up the project environment
-- Example commands for cloning the repository, installing dependencies, etc.
-
-## Steps Involved
+### Steps Involved
 
 1. **Data Acquisition:** Downloading metadata of Mycobacterium tuberculosis from BV-BRC (Patric), including over 300,000 experiments on more than 27,000 isolates.
     - Data source: [BV-BRC (Patric)](https://www.bv-brc.org/)
@@ -48,6 +32,18 @@ These instructions will guide you through setting up the project on your local m
     - Tool Link: [MTB++](https://github.com/M-Serajian/MTB-plus-plus)
 
 6. **Analyzing Results:** Interpreting and understanding the implications of the findings from the AMR prediction.
+
+
+## Getting Started
+These instructions will guide you through setting up the project on your local machine for development and testing purposes.
+
+### Dependencies
+* [python](https://www.python.org/) 3.0+ (3.6+ recommended)
+    - [sklearn](https://scikit-learn.org/stable/whats_new/v1.1.html#version-1-1-2) (Version 1.1.2) 
+    - [joblib](https://joblib.readthedocs.io/en/stable/) (Pre-exists on python3+)
+* [Cmake](https://cmake.org/)(tested on v3.26.4)
+* [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
+
 
 ## Contributing
 We welcome contributions to this project. For details on how to contribute, please refer to the project's contribution guidelines.
