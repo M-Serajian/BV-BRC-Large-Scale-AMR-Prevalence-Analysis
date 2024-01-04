@@ -17,9 +17,14 @@ In this project, we undertake a systematic approach to analyze AMR prevalence. O
 ## Getting Started
 These instructions will guide you through setting up the project on your local machine for development and testing purposes.
 
-### Prerequisites
-- List of necessary software, libraries, and tools
-- Installation instructions or links
+### Dependencies
+* [python](https://www.python.org/) 3.0+ (3.6+ recommended)
+    - [sklearn](https://scikit-learn.org/stable/whats_new/v1.1.html#version-1-1-2) (Version 1.1.2) 
+    - [joblib](https://joblib.readthedocs.io/en/stable/) (Pre-exists on python3+)
+* [Cmake](https://cmake.org/)(tested on v3.26.4)
+* [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
+
+
 
 ### Installation
 - Step-by-step guide to setting up the project environment
