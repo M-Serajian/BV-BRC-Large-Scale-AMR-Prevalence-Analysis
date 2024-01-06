@@ -16,7 +16,7 @@ In this project, we undertake a systematic approach to analyze AMR prevalence. O
 
 ### Steps Involved
 
-1. **Data Acquisition:** Downloading metadata of Mycobacterium tuberculosis from BV-BRC (Patric), including over 300,000 experiments on more than 27,000 isolates.
+1. **Data Acquisition:** Download the metadata of Mycobacterium tuberculosis from BV-BRC (Patric), including over 300,000 experiments on more than 27,000 isolates.
     - Data source: [BV-BRC (Patric)](https://www.bv-brc.org/)
 
 2. **Metadata Analysis:** Conducting a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing.
