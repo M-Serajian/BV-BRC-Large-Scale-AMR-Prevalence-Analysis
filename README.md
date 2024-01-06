@@ -44,7 +44,7 @@ These instructions will guide you through setting up the project on your local m
 * [Cmake](https://cmake.org/)(tested on v3.26.4)
 * [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
 
-
+Please follow the [MTB++ installation instructions](https://github.com/M-Serajian/MTB-plus-plus/tree/main#installation)!
 ## Contributing
 We welcome contributions to this project. For details on how to contribute, please refer to the project's contribution guidelines.
 
