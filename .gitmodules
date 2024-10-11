@@ -1,6 +1,6 @@
 [submodule "MTB-plus-plus"]
-	path = MTB-plus-plus
-	url = https://github.com/M-Serajian/MTB-plus-plus.git
+	path = MTB-pipeline
+	url = https://github.com/M-Serajian/MTB-Pipeline.git
 [submodule "PatricBrowserTools"]
 	path = PatricBrowserTools
 	url = https://github.com/M-Serajian/PatricBrowserTools.git
