@@ -9,21 +9,21 @@
 - [License](#license)
 
 ## Introduction
-This project focuses on the critical analysis of antimicrobial resistance (AMR) in Mycobacterium tuberculosis, leveraging the comprehensive data available through the BV-BRC (Patric) database. It aims to provide insights into the prevalence and patterns of AMR, contributing to the broader scientific understanding and informing future research and treatment strategies.
+This project focuses on the critical analysis of antimicrobial resistance (AMR) in Mycobacterium tuberculosis, leveraging the comprehensive data available through the BV-BRC (previously known as Patric) database. It aims to provide insights into the prevalence and patterns of AMR, contributing to the broader scientific understanding and informing future research and treatment strategies.
 
 ## Overview
 In this project, we undertake a systematic approach to analyze AMR prevalence. Our methodology encompasses the acquisition and analysis of extensive metadata, utilization of specialized tools for data retrieval and processing, and advanced predictive modeling techniques to interpret our findings.
 
 ### Steps Involved
 
-1. **Data Acquisition:** Download the metadata of Mycobacterium tuberculosis from BV-BRC (Patric), including 27,000 isolates that have been used in over 300,000 AST experiments.
-    - Data source: [BV-BRC (Patric)](https://www.bv-brc.org/)
+1. **Data Acquisition:** Download the metadata of Mycobacterium tuberculosis from BV-BRC, including 27,000 isolates that have been used in over 300,000 AST experiments.
+    - Data source: [BV-BRC](https://www.bv-brc.org/)
 
 2. **Metadata Analysis:** Conducting a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing.
     - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/Scientific_reports_MTB_plus_plus/blob/main/patric_metadata_analisys/patric_metadata_analysis.ipynb)
 
 3. **Data Retrieval:** Employing PatricBrowserTools for efficient data retrieval from the BV-BRC database.
-    - Tool Link: [PatricBrowserTools](https://github.com/M-Serajian/PatricBrowserTools)
+    - Tool Link: [BV-BRC-BrowserTools ](https://github.com/M-Serajian/BV-BRC-BrowserTools )
 
 4. **Pre-processing of FASTA Files:** Using FASTATrimmer to process the FASTA files for optimal analysis readiness.
     - Tool Link: [FASTATrimmer](https://github.com/M-Serajian/FASTATrimmer)
