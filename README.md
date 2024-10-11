@@ -72,8 +72,8 @@ MTB++ fully supports parallel execution. For optimal workflow, we recommend stor
 ruby MTB++_Report_Consolidation.rb -d [DATA_DIRECTORY] -o [OUTPUT_DIRECTORY]
 ```
 **Options:**
-   - **`-DATA_DIRECTORY MTB++_output_directory`**
-     DATA_DIRECTORY is the directory where the predictions of MTB++ are stored. 
+   - **`-DATA_DIRECTORY`**
+     DATA_DIRECTORY is the directory where the predictions of MTB++ are stored; it is the same as `MTB++_output_directory` which was defined in the previous step. 
    - **`-o OUTPUT_DIRECTORY`**  
      The output directory will contain consolidated data, generating two CSV files: one for logistic regression and one for random forest. These files will present MTB++ predictions for each unique genome ID, including the corresponding organized antibiotic resistance phenotypes.
 
