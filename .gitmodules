@@ -1,4 +1,4 @@
-[submodule "MTB-plus-plus"]
+[submodule "MTB-Pipeline"]
 	path = MTB-pipeline
 	url = https://github.com/M-Serajian/MTB-Pipeline.git
 [submodule "PatricBrowserTools"]
