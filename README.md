@@ -39,6 +39,7 @@ sh BV-BRC-BrowserTools_Slurm.sh [options]
 ```
 
 >Options:
+
 -o GENOMES_SAVING_DIRECTORY
 Specify the directory where the genomic data from BV-BRC will be stored. This directory must have more than 1TB of available space as the genomic data can be very large.
 
