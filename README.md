@@ -37,19 +37,19 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
    sh BV-BRC-BrowserTools_Slurm.sh [options]
    ```
 
-   > Options:
+   **Options:**
    - **`-o GENOMES_SAVING_DIRECTORY`**  
      Specify the directory where the genomic data from BV-BRC will be stored. This directory must have more than 1TB of available space as the genomic data can be very large.
 
-   - **`-i ADDRESS_TO_GENOME_ID_TEXT_FILE`**  
-     Provide the path to the text file that contains genome IDs collected from a previous step. These genome IDs will be used for further analysis.
+   - **`-i GENOME_ID_TEXT_FILE_DIRECTORY`**  
+     Provide the directory to the text file that contains genome IDs collected from a previous step. These genome IDs will be used for further analysis.
 
    - **`-f FILE_TYPE`**  
      The format of the genomic data to be downloaded. For example, use `fna` for FASTA format.
 
-   > Example Command:
+   **Example Command:**
    ```bash
-   sh BV-BRC-BrowserTools_Slurm.sh -o /path/to/genomes_directory -i /path/to/genome_ids.txt -f fna
+   sh BV-BRC-BrowserTools_Slurm.sh -o /path/to/genomes_directory -i /path/to/genome_ids_directory -f fna
    ```
 
 5. **Predicting AMR:** Use MTB++ for accurate prediction of antimicrobial resistance.  
