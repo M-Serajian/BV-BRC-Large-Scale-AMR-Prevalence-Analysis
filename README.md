@@ -27,7 +27,7 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
     - Data source: [BV-BRC](https://www.bv-brc.org/)
 
 3. **Metadata Analysis:** Perform a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing. Approximately 27,000 unique isolate IDs were found, and a list was created to retrieve them from the BV-BRC database. Non-human isolates were excluded from further analysis.  
-    - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/Scientific_reports_MTB_plus_plus/blob/main/BV-BRC_metadata_analisys/BV-BRC_metadata_analysis.ipynb)
+    - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/BV-BRC-Large-Scale-AMR-Prevalence-Analysis/blob/main/BV-BRC_metadata_analysis/BV-BRC_metadata_analysis.ipynb)
 
 4. **Data Retrieval:** Use BV-BRC-BrowserTools for efficient data retrieval from the BV-BRC database. As part of this project, we developed a tool to retrieve over 27,000 isolates in under an hour.  
     - Tool Link: [BV-BRC-BrowserTools](https://github.com/M-Serajian/BV-BRC-BrowserTools)
