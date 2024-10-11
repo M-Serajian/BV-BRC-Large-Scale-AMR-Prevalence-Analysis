@@ -1,3 +1,4 @@
+
 # Large-scale Analysis of Antimicrobial Resistance Prevalence in BV-BRC (Patric) database
 
 ## Table of Contents
@@ -17,10 +18,10 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
 ### Steps Involved
 
 1. **Clone the project:**
-```bash
-git clone https://github.com/M-Serajian/BV-BRC-Large-Scale-AMR-Prevalence-Analysis.git
-git submodule update --init --recursive
-```
+   ```bash
+   git clone https://github.com/M-Serajian/BV-BRC-Large-Scale-AMR-Prevalence-Analysis.git
+   git submodule update --init --recursive
+   ```
 
 2. **Data Acquisition:** Download the metadata of *Mycobacterium tuberculosis* from BV-BRC, including over 27,000 isolates that have been used in over 300,000 MTB antimicrobial resistance experiments.  
     - Data source: [BV-BRC](https://www.bv-brc.org/)
@@ -31,42 +32,51 @@ git submodule update --init --recursive
 4. **Data Retrieval:** Use BV-BRC-BrowserTools for efficient data retrieval from the BV-BRC database. As part of this project, we developed a tool to retrieve over 27,000 isolates in under an hour.  
     - Tool Link: [BV-BRC-BrowserTools](https://github.com/M-Serajian/BV-BRC-BrowserTools)
 
-``` bash
-cd BV-BRC-BrowserTools
-sh BV-BRC-BrowserTools_Slurm.sh [options]
+   ```bash
+   cd BV-BRC-BrowserTools
+   sh BV-BRC-BrowserTools_Slurm.sh [options]
+   ```
 
+   > Options:
+   - **`-o GENOMES_SAVING_DIRECTORY`**  
+     Specify the directory where the genomic data from BV-BRC will be stored. This directory must have more than 1TB of available space as the genomic data can be very large.
 
-```
+   - **`-i ADDRESS_TO_GENOME_ID_TEXT_FILE`**  
+     Provide the path to the text file that contains genome IDs collected from a previous step. These genome IDs will be used for further analysis.
 
->Options:
+   - **`-f FILE_TYPE`**  
+     The format of the genomic data to be downloaded. For example, use `fna` for FASTA format.
 
--o GENOMES_SAVING_DIRECTORY
-Specify the directory where the genomic data from BV-BRC will be stored. This directory must have more than 1TB of available space as the genomic data can be very large.
+   > Example Command:
+   ```bash
+   sh BV-BRC-BrowserTools_Slurm.sh -o /path/to/genomes_directory -i /path/to/genome_ids.txt -f fna
+   ```
 
--i ADDRESS_TO_GENOME_ID_TEXT_FILE
-Provide the path to the text file that contains genome IDs collected from a previous step. These genome IDs will be used for further analysis.
-
--f FILE_TYPE
-The format of the genomic data to be downloaded. For example, use fna for FASTA format.
-
->Example Command:
-sh BV-BRC-BrowserTools_Slurm.sh -o /path/to/genomes_directory -i /path/to/genome_ids.txt -f fna
-
-
-4. **Predicting AMR:** Use MTB++ for accurate prediction of antimicrobial resistance.  
+5. **Predicting AMR:** Use MTB++ for accurate prediction of antimicrobial resistance.  
     - Tool Link: [MTB++](https://github.com/M-Serajian/MTB-Pipeline)
 
-5. **Analyzing Results:** Interpret the results from the AMR prediction and compile them into a comprehensive CSV file for further analysis of all isolates.
+   ```bash
+   cd ..
+   cd MTB-Pipeline
+   sh setup.sh
+   ```
+
+   Running MTB++:
+   ```bash
+   python Mtb++.py -f FASTAfile -o Output.csv
+   ```
+
+6. **Analyzing Results:** Interpret the results from the AMR prediction and compile them into a comprehensive CSV file for further analysis of all isolates.
 
 ## Getting Started
 These instructions will help you set up the project on your local machine for development and testing.
 
 ### Dependencies
-* [Python](https://www.python.org/) 3.0+ (3.6+ recommended)
-    - [sklearn](https://scikit-learn.org/stable/whats_new/v1.1.html#version-1-1-2) (Version 1.1.2)
-    - [joblib](https://joblib.readthedocs.io/en/stable/) (Pre-installed with Python 3+)
-* [CMake](https://cmake.org/) (tested on v3.26.4)
-* [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
+- [Python](https://www.python.org/) 3.0+ (3.6+ recommended)
+   - [sklearn](https://scikit-learn.org/stable/whats_new/v1.1.html#version-1-1-2) (Version 1.1.2)
+   - [joblib](https://joblib.readthedocs.io/en/stable/) (Pre-installed with Python 3+)
+- [CMake](https://cmake.org/) (tested on v3.26.4)
+- [GCC](https://gcc.gnu.org/) (9.3.3 recommended)
 
 Follow the [MTB++ installation instructions](https://github.com/M-Serajian/MTB-plus-plus/tree/main#installation) for further setup.
 
