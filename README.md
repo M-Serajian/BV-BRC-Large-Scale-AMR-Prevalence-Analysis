@@ -16,14 +16,41 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
 
 ### Steps Involved
 
-1. **Data Acquisition:** Download the metadata of *Mycobacterium tuberculosis* from BV-BRC, including over 27,000 isolates that have been used in over 300,000 MTB antimicrobial resistance experiments.  
+1. **Clone the project:**
+```bash
+git clone https://github.com/M-Serajian/BV-BRC-Large-Scale-AMR-Prevalence-Analysis.git
+git submodule update --init --recursive
+```
+
+2. **Data Acquisition:** Download the metadata of *Mycobacterium tuberculosis* from BV-BRC, including over 27,000 isolates that have been used in over 300,000 MTB antimicrobial resistance experiments.  
     - Data source: [BV-BRC](https://www.bv-brc.org/)
 
-2. **Metadata Analysis:** Perform a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing. Approximately 27,000 unique isolate IDs were found, and a list was created to retrieve them from the BV-BRC database. Non-human isolates were excluded from further analysis.  
+3. **Metadata Analysis:** Perform a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing. Approximately 27,000 unique isolate IDs were found, and a list was created to retrieve them from the BV-BRC database. Non-human isolates were excluded from further analysis.  
     - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/Scientific_reports_MTB_plus_plus/blob/main/BV-BRC_metadata_analisys/BV-BRC_metadata_analysis.ipynb)
 
-3. **Data Retrieval:** Use BV-BRC-BrowserTools for efficient data retrieval from the BV-BRC database. As part of this project, we developed a tool to retrieve over 27,000 isolates in under an hour.  
+4. **Data Retrieval:** Use BV-BRC-BrowserTools for efficient data retrieval from the BV-BRC database. As part of this project, we developed a tool to retrieve over 27,000 isolates in under an hour.  
     - Tool Link: [BV-BRC-BrowserTools](https://github.com/M-Serajian/BV-BRC-BrowserTools)
+
+``` bash
+cd BV-BRC-BrowserTools
+sh BV-BRC-BrowserTools_Slurm.sh [options]
+
+
+```
+
+>Options:
+-o GENOMES_SAVING_DIRECTORY
+Specify the directory where the genomic data from BV-BRC will be stored. This directory must have more than 1TB of available space as the genomic data can be very large.
+
+-i ADDRESS_TO_GENOME_ID_TEXT_FILE
+Provide the path to the text file that contains genome IDs collected from a previous step. These genome IDs will be used for further analysis.
+
+-f FILE_TYPE
+The format of the genomic data to be downloaded. For example, use fna for FASTA format.
+
+>Example Command:
+sh BV-BRC-BrowserTools_Slurm.sh -o /path/to/genomes_directory -i /path/to/genome_ids.txt -f fna
+
 
 4. **Predicting AMR:** Use MTB++ for accurate prediction of antimicrobial resistance.  
     - Tool Link: [MTB++](https://github.com/M-Serajian/MTB-Pipeline)
