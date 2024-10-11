@@ -65,12 +65,17 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
    ```bash
    python Mtb++.py -f FASTAfile -o Output.csv
    ```
-MTB++ supports parallel execution without any issues. To facilitate seamless progression to the next step, we recommend saving the output predictions in the same directory, each as a uniquely named CSV file. This will enable easy use of the MTB++_Report_Consolidation method, which is implemented within MTB++ for efficient report consolidation. Suppose this directory is called `MTB++_output_directory`.  
+MTB++ fully supports parallel execution. For optimal workflow, we recommend storing the output predictions in a designated directory, such as `MTB++_output_directory`, with each file saved as a uniquely named CSV. This structure ensures efficient processing in the subsequent steps, particularly when using the MTB++_Report_Consolidation method, which is designed to streamline report aggregation within MTB++.
 
 6. **Analyzing Results:** Interpret the results from the AMR prediction and compile them into a comprehensive CSV file for further analysis of all isolates.
 ```bash
 ruby MTB++_Report_Consolidation.rb -d [DATA_DIRECTORY] -o [OUTPUT_DIRECTORY]
 ```
+**Options:**
+   - **`-DATA_DIRECTORY MTB++_output_directory`**
+     DATA_DIRECTORY is the directory where the predictions of MTB++ are stored. 
+   - **`-o OUTPUT_DIRECTORY`**  
+     The output directory will contain consolidated data, generating two CSV files: one for logistic regression and one for random forest. These files will present MTB++ predictions for each unique genome ID, including the corresponding organized antibiotic resistance phenotypes.
 
 ## Getting Started
 These instructions will help you set up the project on your local machine for development and testing.
