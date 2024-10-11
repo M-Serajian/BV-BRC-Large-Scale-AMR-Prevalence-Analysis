@@ -20,9 +20,9 @@ In this project, we undertake a systematic approach to analyze AMR prevalence. O
     - Data source: [BV-BRC](https://www.bv-brc.org/)
 
 2. **Metadata Analysis:** Conducting a detailed analysis of the metadata to extract valuable insights and prepare the data for further processing.
-    - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/Scientific_reports_MTB_plus_plus/blob/main/patric_metadata_analisys/patric_metadata_analysis.ipynb)
+    - Analysis Notebook: [Analyzing the metadata](https://github.com/M-Serajian/Scientific_reports_MTB_plus_plus/blob/main/BV-BRC_metadata_analisys/BV-BRC_metadata_analysis.ipynb)
 
-3. **Data Retrieval:** Employing PatricBrowserTools for efficient data retrieval from the BV-BRC database.
+3. **Data Retrieval:** Employing BV-BRC-BrowserTools for efficient data retrieval from the BV-BRC database.
     - Tool Link: [BV-BRC-BrowserTools ](https://github.com/M-Serajian/BV-BRC-BrowserTools )
 
 4. **Pre-processing of FASTA Files:** Using FASTATrimmer to process the FASTA files for optimal analysis readiness.
