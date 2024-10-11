@@ -65,9 +65,12 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
    ```bash
    python Mtb++.py -f FASTAfile -o Output.csv
    ```
-MTB++ supports parallel execution without any issues. To facilitate seamless progression to the next step, we recommend saving the output predictions in the same directory, each as a uniquely named CSV file. This will enable easy use of the MTB++_Report_Consolidation method, which is implemented within MTB++ for efficient report consolidation.
+MTB++ supports parallel execution without any issues. To facilitate seamless progression to the next step, we recommend saving the output predictions in the same directory, each as a uniquely named CSV file. This will enable easy use of the MTB++_Report_Consolidation method, which is implemented within MTB++ for efficient report consolidation. Suppose this directory is called `MTB++_output_directory`.  
 
 6. **Analyzing Results:** Interpret the results from the AMR prediction and compile them into a comprehensive CSV file for further analysis of all isolates.
+```bash
+ruby MTB++_Report_Consolidation.rb -d [DATA_DIRECTORY] -o [OUTPUT_DIRECTORY]
+```
 
 ## Getting Started
 These instructions will help you set up the project on your local machine for development and testing.
