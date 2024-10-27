@@ -20,6 +20,7 @@ We take a systematic approach to AMR analysis, incorporating large-scale data re
 1. **Clone the project:**
    ```bash
    git clone https://github.com/M-Serajian/BV-BRC-Large-Scale-AMR-Prevalence-Analysis.git
+   cd BV-BRC-Large-Scale-AMR-Prevalence-Analysis
    git submodule update --init --recursive
    ```
 
